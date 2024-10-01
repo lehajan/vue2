@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no,
+initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script defer src="js/vue.js"></script>
+    <script defer src="js/main.js"></script>
+
+</head>
+<body>
+<div id="app">
+    <div class="search-container">
+        <input type="text" v-model="searchQuery" placeholder="Поиск...">
+    </div>
+    <div class="board">
+        <add_task @add-task="addTask"></add_task>
+        <column v-for="(column, index) in columns" :key="index" :class="{disabled:column.disabled}" :is-first-column-disabled="isFirstColumnDisabled" :column="column" @save="saveData"  @move-task="moveTask"></column>
+    </div>
+    <search_results :filtered-tasks="filteredTasks"></search_results>
+    <br><br>
+</div>
+
+
+
+
+</body>
+</html>

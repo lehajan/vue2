@@ -1,0 +1,127 @@
+body {
+    font-family: tahoma, serif;
+    color: #282828;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.board {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.column {
+    width: 30%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.column h2 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.card {
+    border: 1px solid #eee;
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card:last-child {
+    margin-bottom: 0;
+}
+
+.task {
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: #f9f9f9;
+    border-radius: 3px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+button {
+    padding: 5px 14px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: #66CDAA;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.name_task {
+    white-space: pre-line;
+    word-break: break-all;
+    overflow-wrap: break-word;
+    width: 100%;
+    max-width: 200px;
+}
+
+.timestamp {
+    font-size: 12px;
+    color: #888;
+    margin-top: 5px;
+}
+.disabled {
+    pointer-events: none;
+    background-color: bisque;
+    opacity: 0.3;
+}
+
+
+.search-container {
+    margin-bottom: 20px;
+}
+
+.search-container input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.search-container input[type="text"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+
+.disabled_poisk {
+    pointer-events: none;
+    background-color: cornsilk;
+    opacity: 1;
+    max-width: 350px;
+    border-radius: 4px;
+}
+.search-results {
+    margin-left: 10px;
+}
